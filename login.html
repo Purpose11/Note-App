@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/80f60694e5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="heading">
+            <h1>Secret <span>Note</span></h1>
+        </div>
+    <div class="container">
+
+        <form id="form" action="post">
+            <div class="username">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="password">
+                <input type="password" id="password" placeholder="Password">
+                <span> <i class="fa-solid fa-eye" id="eye"></i></span>
+            </div>
+        </form>
+        <div class="button">
+                
+            <input type="button" value="Log In" id="logIn">
+            </div>
+            
+           <div class="link"><a href="#">Create New Account</a></div> 
+    </div>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(./note1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: sans-serif
+        }
+        .heading h1{
+            color: white;
+            margin-bottom: 20px;
+        }
+        .heading span{
+            color: #42afce;
+        }
+        .container{
+            background: white;
+            height: 350px;
+            width: 400px;
+            border-radius: 7px;
+            box-shadow: 0 0 10px;
+            padding: 10px 10px;
+            text-align: center;
+        }
+        form{
+            margin-top: 50px;
+        }
+        form input{
+            width: 80%;
+            height: 40px;
+            padding: 5px 7px;
+            border: 1px solid #0e689c;
+            border-radius: 5px;
+        }.username{
+            margin-top: 20px;
+        }
+        .password{
+            margin-top: 20px;
+            position: relative;
+        }.password span{
+            position: absolute;
+            right: 12%;
+            top: 20%;
+            cursor: pointer;
+            
+        }.password span i{
+            color: #0e689c;
+            font-size: 12px;
+        }
+        .button{
+            margin-top: 30px;
+            
+        }.button input{
+            border: none;
+            padding: 7px;
+            background: #0e689c;
+            color: white;
+            width: 100px;
+            cursor: pointer;
+        }
+        .link{
+            margin-top: 30px;
+            font-size: 12px;
+            
+        }
+        .link a{
+            text-decoration: none;
+            color: #0e689c;
+        }
+        
+    </style>
+
+    <script>
+        const username = document.getElementById('username')
+        const password = document.getElementById('password')
+        const btn = document.getElementById('logIn')
+        const eye = document.getElementById('eye')
+        let user = "Admin"
+        let pass = "adebayo"
+        let eyeClicked = "true"
+
+        btn.addEventListener('click', function(){
+
+            if (username.value === user && password.value === pass){
+            window.location.href = 'note.html';
+        }else{
+            alert('Wrong Input')
+        }
+
+        username.value = ""
+        password.value = ""
+
+        })
+
+        eye.addEventListener('click', function(){
+            if (eyeClicked === "true"){
+                password.setAttribute('type', 'text')
+                eye.style.color = "black"
+                eyeClicked = "false"
+            }
+            else{
+                password.setAttribute('type', 'password')
+                eye.style.color = "#0e689c"
+                eyeClicked = "true"
+                
+            }
+
+        })
+        
+    </script>
+</body>
+</html>

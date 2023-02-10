@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/80f60694e5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./note.css">
+    <script src="./note.js" defer></script>
+    <title>Note</title>
+</head>
+<body onload="loadGreeting()">   
+
+        <div id="greeting">
+            <i class="fa-regular fa-user" id="profile"></i> 
+
+            <div class="profile2">
+                <i class="fa-regular fa-user" id="p"></i>
+                <h2 id="displayUser">Admin</h2>
+                <button id="changeUser">Change Username</button>
+                <button id="viewNote">View Notes</button>
+                <button id="saveNote">Save</button>
+            </div>
+
+            <div id = 'changeUserName'>
+
+                <input type="text" id="newUserName" placeholder="Enter New Username">
+                <button id="userNamebtn">Ok</button>
+            </div>
+
+
+        </div>
+
+<div id="main">
+            
+    <div id="edit-btn">
+        <input type="number" id="changeFontSize"  min="1" max="100" value="16">
+        <button type="button" id="boldText"><i class="fa-solid fa-bold"></i></button>
+        <button type="button" id="italizeText"><i class="fa-solid fa-italic"></i></button>
+        <button type="button" id="underline"><i class="fa-solid fa-underline"></i></button>  
+        <button type="button" id="alignLeft"><i class="fa-solid fa-align-left"></i></button>  
+        <button type="button" id="alignCenter"><i class="fa-solid fa-align-center"></i></button>
+        <button type="button" id="alignRight"><i class="fa-solid fa-align-right"></i></button>  
+        <button type="button" id="changeCase">Aa</button>   
+        <input type="color" id="changeColor">      
+    </div>
+        <textarea  id="textArea" placeholder="Enter Note Here"></textarea>
+</div>
+
+
+<div id="storeNotes"> 
+    <button id="close">x</button>
+</div>
+    
+        
+</body>
+</html>
